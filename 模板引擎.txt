@@ -1,0 +1,49 @@
+模板引擎：
+1、jade-破坏式、侵入式、强依赖
+2、ejs-保留式、温和、非侵入式、若依赖
+
+jade渲染：
+html-><html></html>
+
+1、根据锁紧，规定层级
+2、属性放在（）里面，逗号分隔
+3、内容空个格，内容往后堆
+
+属性
+<script src="a.js"></script>
+script(src="a.js")
+
+内容
+<a href="http://www.zhinengshe.com/">官网</a>
+a(href="http://www.zhinengshe.com/") 官网
+
+style="width:200px;height:200px;background:red;"
+1.普通属性写法
+2.用json
+
+class="aaa left-swrap active"
+1.普通属性写法
+2.用arr
+
+简写:3.jade
+
+模板引擎：生成页面
+<li><span>用户名:</span><%=blue%></li>
+
+jade
+1.识别单双标签
+
+9.jade文件中的感叹号为输出原标签,不转译
+
+ejs渲染
+ejs的输出方式：
+1、<%=name %>
+2、<%=json.arr[0].name %>
+3、<%=12+5 %>
+4、<%='fjslfsf' %>
+
+<%
+	var str="<div></div>";
+%>
+<%=str %>  输出结果为：&lt;div&gt;&lt;/div&gt;(未转译)
+<%-str %>  输出结果为：<div></div>(转译)
